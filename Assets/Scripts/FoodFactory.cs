@@ -1,30 +1,53 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
-public class FoodFactory : MonoBehaviour, IEntity
+public class FoodFactory : MonoBehaviour
 {
-    [SerializeField] private GameObject food;
+    public GameObject[] foods;
+    public ChooseFood[] chooseFoods;
     
     #region Singleton
+
     private static FoodFactory _foodFactory;
+
     public static FoodFactory Instance
     {
         get
         {
             if (_foodFactory == null)
             {
-                _foodFactory = GameObject.FindObjectOfType<FoodFactory>();
+                _foodFactory = FindObjectOfType<FoodFactory>();
             }
 
             return _foodFactory;
         }
     }
+
     #endregion
     
     public void Create()
     {
-        Instantiate(food, transform.position, Quaternion.identity);
+        foreach (var cf in chooseFoods)
+        { 
+            switch (cf)
+            {
+                case ChooseFood.FoodTarget:
+                    Food ft = gameObject.AddComponent<FoodTarget>();
+                    ft.Create(foods[0]);
+                    break;
+                case ChooseFood.FoodStune:
+                    Food fs = gameObject.AddComponent<FoodStune>();
+                    fs.Create(foods[1]);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
     }
+}
 
+public enum ChooseFood
+{
+    FoodTarget,
+    FoodStune
 }

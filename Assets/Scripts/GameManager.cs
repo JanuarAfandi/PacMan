@@ -2,15 +2,9 @@
 
 public class GameManager : MonoBehaviour
 {
-    private Factory _factory;
-    public Factory f;
     void Start()
     {
-        _factory = new Factory(Object.Food);
-        _factory.Create();
-        _factory = new Factory(Object.Food);
-        _factory.Create();
-        
+        FoodFactory.Instance.Create();
     }
     
     void Update()
