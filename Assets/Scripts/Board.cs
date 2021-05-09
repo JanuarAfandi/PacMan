@@ -1,45 +1,17 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
-public class Board : MonoBehaviour
+public class Board : Singleton<Board>
 {
-    public GameObject inputName;
-    public GameObject inputField;
-    public GameObject Map1;
-    public GameObject Map2;
-    public GameObject Map3;
+    private static Board _board;
+    public GameObject [] map;
 
-    // Start is called before the first frame update
-    void Start()
+    public void RandomMap()
     {
-        inputName.SetActive(true);
-        Time.timeScale = 0f;
-    }
-    public void enterButtonClicked()
-    {
-        inputName.SetActive(false);
-        Time.timeScale = 1f;
+        var rand = Random.Range(0,3);
 
-        Data.Name = inputField.GetComponent<Text>().text;
-
-        int rand = Random.Range(1,3);
-        if (rand == 1)
+        for (var i = 0; i < map.Length; i++)
         {
-            Map1.SetActive(true);
-            Map2.SetActive(false);
-            Map2.SetActive(false);
-        }
-        if (rand == 2)
-        {
-            Map1.SetActive(false);
-            Map2.SetActive(true);
-            Map3.SetActive(false);
-        }
-        if (rand == 3)
-        {
-            Map1.SetActive(false);
-            Map2.SetActive(false);
-            Map3.SetActive(true);
+            map[i].SetActive(i == rand);
         }
     }
 }

@@ -10,9 +10,9 @@ public class MainMenu : MonoBehaviour
         CreditPanel.SetActive(false);
     }
 
-    public void playButtonClicked()
+    public void PlayButtonClicked()
     {
-        SceneManager.LoadScene("Map1");
+        SceneManager.LoadScene("Map");
     }    
     public void CreditButtonClicked()
     {
