@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace Character
 {
-    //class 
     public class Ghost : Character<Ghost>
     {
         
         [HideInInspector] public static bool isStune = false;
         private bool _move = true;
 
+        //method untuk movement ghost
         public override void Movement()
         {
             var position = Player.Instance.transform.position;
@@ -38,11 +38,13 @@ namespace Character
                     Move(new Vector2());
                 }
             }
-
+            
+            //jika isStune aktif, call method StuneActive
             if(isStune)
                 StartCoroutine(StuneActive());
         }
 
+        //method untuk mengaktifkan stune pada ghost selama 5 detik
         private IEnumerator StuneActive()
         {
             _move = false;

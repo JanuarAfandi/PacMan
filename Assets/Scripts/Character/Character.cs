@@ -17,10 +17,10 @@ namespace Character
             distance, 
             board);
         
-        //method untuk input movement
+        //method untuk movement
         protected void Move(Vector2 turn) => transform.Translate( turn * (Time.deltaTime * speed) );
         
-        //method untuk movement
+        //method untuk input movement
         public abstract void Movement();
     }
 }

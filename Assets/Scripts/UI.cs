@@ -21,7 +21,8 @@ public class UI : Singleton<UI>
 
     [SerializeField] private GameObject panelWin;
 
-    public void ShowUI()
+    //Method untuk menampilkan data player pada ui
+    public void ShowUIPlayer()
     {
         scoreText.text = $"Score :  {Data.Score}";
         nameText.text = $"Name :   {Data.Name}";
@@ -29,6 +30,7 @@ public class UI : Singleton<UI>
         health.text = $"Health : {Data.Health}";
     }
 
+    //method untuk handle input name player
     public void EnterButtonClicked()
     {
         btn.onClick.AddListener(() =>
@@ -42,12 +44,14 @@ public class UI : Singleton<UI>
         });
     }
 
+    //method untuk hide input name & button player
     private void HiddenUI()
     {
         inputName.gameObject.SetActive(false);
         btn.gameObject.SetActive(false);
     }
 
+    //method untuk menampilkan ui gameover
     public void ShowGameOver()
     {
         if (GameOver.IsGameOver)
@@ -58,12 +62,14 @@ public class UI : Singleton<UI>
         panelGameOver.SetActive(GameOver.IsGameOver);
     }
 
+    //method untuk melakukan restart dan dipanggil ketika button restart di click
     public void Restart()
     {
         TimeManagement.TimeActive();
         SceneManager.LoadScene("Scenes/Map");
     }
 
+    //method untuk menampilkan ui gamewin
     public void ShowGameWin()
     {
         if(GameWin.IsWin)

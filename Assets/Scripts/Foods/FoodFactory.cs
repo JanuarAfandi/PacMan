@@ -6,11 +6,12 @@ namespace Foods
 {
     public class FoodFactory : Singleton<FoodFactory>
     {
-        public GameObject foodTarget, foodStune; 
+        public GameObject foodTarget, foodStune; //gameobject yang akan di instantiate 
         public ChooseFood[] chooseFoods; //array enum untuk menentukan pilihan user di inspector
     
         // public List<DataFood> ListFoods = new List<DataFood>();
-
+        
+        [HideInInspector]
         public int sizeTarget;
 
         //method untuk instantiate object food

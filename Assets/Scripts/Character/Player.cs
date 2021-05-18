@@ -4,9 +4,7 @@ namespace Character
 {
     public class Player : Character<Player>
     {
-        /// <summary>
-        ///   <para>Input Player & Movement Player</para>
-        /// </summary>
+       //Input movement player
         public override void Movement()
         {
             if (Input.GetKey(KeyCode.A) && !CheckCollider(Vector2.left))

@@ -2,9 +2,9 @@
 
 public class Board : Singleton<Board>
 {
-    private static Board _board;
     public GameObject [] map;
 
+    //method untuk random board berdasarkan array map 
     public void RandomMap()
     {
         var rand = Random.Range(0,3);
