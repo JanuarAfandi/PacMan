@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+//4210191018 - M.Dwi Febrian
 namespace Character
 {
     //abstract class Character yang diturunkan kepada class player dan ghost karena mempunyai beberapa fungsi yang sama 

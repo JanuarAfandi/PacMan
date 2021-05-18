@@ -1,9 +1,8 @@
-﻿using System;
-using Character;
-using Firebase.Database;
+﻿using Character;
 using Foods;
 using UnityEngine;
-using Random = UnityEngine.Random;
+
+//4210191018 - M.Dwi Febrian
 
 public class GameManager : MonoBehaviour
 {

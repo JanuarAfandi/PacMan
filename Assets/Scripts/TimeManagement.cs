@@ -1,9 +1,11 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+
+//4210191018 - M.Dwi Febrian
 
 //class yang digunakan untuk menghandle waktu pada game
 public class TimeManagement : Singleton<TimeManagement>
 {
+    
     //batas waktu yang diberikan pada player untuk menyelesaikan game sebelum waktu habis 
    public float timer;
    

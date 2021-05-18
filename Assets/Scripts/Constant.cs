@@ -1,4 +1,5 @@
-﻿public static class Constant
+﻿//4210191018 - M.Dwi Febrian
+public static class Constant
 {
     public const string GameObject = "GameObject";
     public const string Player = "Player";

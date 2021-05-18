@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+//4210191029 - Dimas Rizky A.F
+
 public class Board : Singleton<Board>
 {
     public GameObject [] map;

@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+//4210191029 - Dimas Rizky A.F 
+
 //class yang digunakan untuk menghandle ui
 public class UI : Singleton<UI>
 {

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+//4210191018 - M.Dwi Febrian
 namespace Character
 {
     public class Ghost : Character<Ghost>

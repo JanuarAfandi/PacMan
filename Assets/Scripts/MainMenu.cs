@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+
+//4210191029 - Dimas Rizky A.F 
 public class MainMenu : MonoBehaviour
 {
     public GameObject MenuPanel;
