@@ -1,13 +1,13 @@
-﻿using PacMan.Character;
+﻿using Character;
 using UnityEngine;
 
-namespace PacMan.Foods
+namespace Foods
 {
     public class FoodTarget : Food
     {
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.CompareTag("Player"))
+            if (other.gameObject.CompareTag(Constant.Player))
             {
                 Data.Score++;
                 Destroy(gameObject);

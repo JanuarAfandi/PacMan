@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace PacMan.Character
+namespace Character
 {
     public class Player : Character<Player>
     {

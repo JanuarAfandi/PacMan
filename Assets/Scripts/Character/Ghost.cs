@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace PacMan.Character
+namespace Character
 {
+    //class 
     public class Ghost : Character<Ghost>
     {
         

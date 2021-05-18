@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using PacMan.Foods;
 using UnityEngine;
 
-namespace PacMan.Foods
+namespace Foods
 {
     public class FoodFactory : Singleton<FoodFactory>
     {
-        public GameObject[] foods;
-        public ChooseFood[] chooseFoods;
+        public GameObject foodTarget, foodStune; 
+        public ChooseFood[] chooseFoods; //array enum untuk menentukan pilihan user di inspector
     
-        public List<DataFood> ListFoods = new List<DataFood>();
+        // public List<DataFood> ListFoods = new List<DataFood>();
 
+        public int sizeTarget;
+
+        //method untuk instantiate object food
         public void Create()
         {
             foreach (var cf in chooseFoods)
@@ -20,11 +22,12 @@ namespace PacMan.Foods
                 {
                     case ChooseFood.FoodTarget:
                         Food ft = gameObject.AddComponent<FoodTarget>();
-                        ft.Create(foods[0]);
+                        ft.Create(foodTarget);
+                        sizeTarget++;
                         break;
                     case ChooseFood.FoodStune:
                         Food fs = gameObject.AddComponent<FoodStune>();
-                        fs.Create(foods[1]);
+                        fs.Create(foodStune);
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -33,16 +36,17 @@ namespace PacMan.Foods
         }
     }
 
+    //digunakan untuk memilih antara food target / stune berdasarkan input player di inspector
     public enum ChooseFood
     {
         FoodTarget,
         FoodStune
     }
 
-    [System.Serializable]
-    public struct DataFood
-    {
-        public ChooseFood ChooseFood;
-        public Vector3 Position;
-    }
+    // [Serializable]
+    // public struct DataFood
+    // {
+    //     public ChooseFood ChooseFood;
+    //     public Vector3 Position;
+    // }
 }

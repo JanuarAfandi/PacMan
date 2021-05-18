@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+//abstract class singleton digunakan sebagai parent class untuk mengimplementasikan singleton pada class turunannya
+public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     private static T _singleton;
 
