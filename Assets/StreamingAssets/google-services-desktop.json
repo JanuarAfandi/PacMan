@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "562072530714",
+    "project_id": "pacman-8b109",
+    "storage_bucket": "pacman-8b109.appspot.com",
+    "firebase_url": "https://pacman-8b109-default-rtdb.asia-southeast1.firebasedatabase.app/"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562072530714:android:de788763171ad24c5046a3",
+        "android_client_info": {
+          "package_name": "com.febrian.PacMan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562072530714-f8lb33sf0hravjsj4qkrr1ola4jm9hhf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK2G4iBC4qndr9zM_0_knF6r6KByKv3ZQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562072530714-f8lb33sf0hravjsj4qkrr1ola4jm9hhf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
