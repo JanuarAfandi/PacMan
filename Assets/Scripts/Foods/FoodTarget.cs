@@ -4,7 +4,7 @@ using UnityEngine;
 //4210191018 - M.Dwi Febrian
 namespace Foods
 {
-    public class FoodTarget : Food
+    public class FoodTarget : MonoBehaviour,IFactory
     {
         //method untuk mengecek collider foodTarget
         private void OnTriggerEnter2D(Collider2D other)
@@ -18,9 +18,9 @@ namespace Foods
         }
         
         //method untuk instantiate object foodTarget
-        public override void Create(GameObject obj)
+        public void Create(GameObject obj)
         {
-            Instantiate(obj, transform.position, Quaternion.identity);
+            obj.SetActive(true);
         }
     }
 }

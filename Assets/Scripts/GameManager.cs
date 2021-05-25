@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
         Data.Name = "";
         
         //instantiate object food
-        FoodFactory.Instance.Create();
+        Factory.Instance.Create();
         TimeManagement.TimeInActive();
         
         Database.Get();

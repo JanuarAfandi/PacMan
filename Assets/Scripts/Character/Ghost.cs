@@ -4,9 +4,8 @@ using UnityEngine;
 //4210191018 - M.Dwi Febrian
 namespace Character
 {
-    public class Ghost : Character<Ghost>
+    public class Ghost : Character<Ghost>, IFactory
     {
-        
         [HideInInspector] public static bool isStune = false;
         private bool _move = true;
 
@@ -60,6 +59,12 @@ namespace Character
             {
                 Data.Health--;
             }
+        }
+
+        public void Create(GameObject obj)
+        {
+            obj.SetActive(true);
+            obj.GetComponent<Ghost>().board = LayerMask.GetMask("Board");
         }
     }
 }

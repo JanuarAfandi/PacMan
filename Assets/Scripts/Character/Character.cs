@@ -7,7 +7,7 @@ namespace Character
     public abstract class Character<T> : Singleton<Character<T>>
     {
         [Header("Movement")]
-        public float speed;
+        public float speed = 5f;
         public float distance = 1f;
         public LayerMask board;
         
