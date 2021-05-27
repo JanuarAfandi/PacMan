@@ -12,7 +12,7 @@ namespace Foods
         [HideInInspector]
         public int sizeTarget;
 
-        //method untuk instantiate object 
+        //method untuk menambahkan component script food stune/ food target / ghost pada gameobject
         public void Create()
         {
             foreach (var listObj in listObject)
@@ -47,6 +47,7 @@ namespace Foods
         Ghost
     }
 
+    //model untuk meyimpan gameobject food/ghost dan enum choose
     [Serializable]
     public struct DataObject
     {
