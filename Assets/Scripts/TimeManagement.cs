@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 
-//4210191018 - M.Dwi Febrian
-
 //class yang digunakan untuk menghandle waktu pada game
 public class TimeManagement : Singleton<TimeManagement>
 {

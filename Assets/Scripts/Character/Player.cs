@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-//4210191018 - M.Dwi Febrian
 namespace Character
 {
     public class Player : Character<Player>

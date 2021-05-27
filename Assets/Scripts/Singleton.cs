@@ -3,9 +3,6 @@
 //abstract class singleton digunakan sebagai parent class untuk mengimplementasikan singleton pada class turunannya
 public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
-    
-    //4210191018 - M.Dwi Febrian
-    
     private static T _singleton;
 
     public static T Instance

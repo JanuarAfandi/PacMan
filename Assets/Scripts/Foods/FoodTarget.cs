@@ -1,7 +1,6 @@
 ﻿using Character;
 using UnityEngine;
 
-//4210191018 - M.Dwi Febrian
 namespace Foods
 {
     public class FoodTarget : MonoBehaviour,IFactory

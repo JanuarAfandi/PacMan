@@ -1,6 +1,5 @@
 ﻿using System;
 
-//4210191018 - M.Dwi Febrian
 namespace Character
 {
     //class model/data yang digunakan untuk menampung data player

@@ -3,8 +3,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-//4210191029 - Dimas Rizky A.F 
-
 //class yang digunakan untuk menghandle ui
 public class UI : Singleton<UI>
 {
@@ -69,6 +67,12 @@ public class UI : Singleton<UI>
     {
         TimeManagement.TimeActive();
         SceneManager.LoadScene("Scenes/Map");
+    }
+
+    public void Exit()
+    {
+        TimeManagement.TimeActive();
+        SceneManager.LoadScene("MainMenu");
     }
 
     //method untuk menampilkan ui gamewin

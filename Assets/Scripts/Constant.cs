@@ -1,4 +1,4 @@
-﻿//4210191018 - M.Dwi Febrian
+﻿
 public static class Constant
 {
     public const string GameObject = "GameObject";

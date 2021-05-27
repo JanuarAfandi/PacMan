@@ -5,13 +5,12 @@ using Firebase.Database;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-//4210191018 - M.Dwi Febrian
-
 public class Database : Singleton<Database>
 {
     private static DatabaseReference _reference;
     private static bool _upload;
-
+    private static List<Data> datas = new List<Data>();
+    
     private void Start()
     {
         _upload = false;
@@ -38,10 +37,9 @@ public class Database : Singleton<Database>
     }
 
     //method untuk mengambil data dari database
-    public static void Get()
+    public static List<Data> Get()
     {
         _reference = FirebaseDatabase.DefaultInstance.GetReference("users");
-        // _reference.ChildAdded += HandleChildAdded;
         _reference.GetValueAsync().ContinueWith(task =>
         {
             if (task.IsCompleted)
@@ -61,15 +59,24 @@ public class Database : Singleton<Database>
                 {
                     print(list.name);
                     print(list.score);
+                    var data = new Data()
+                    {
+                        name = list.name,
+                        score = list.score
+                    };
+                  
+                    datas.Add(data);
+                    
                 }
-                
             }
         });
+        
+        return datas;
     }
     
     //Model untuk menyimpan data dari database
     [Serializable]
-    private struct Data
+    public struct Data
     {
         public string name;
         public int score;

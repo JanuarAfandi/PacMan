@@ -2,8 +2,6 @@
 using Foods;
 using UnityEngine;
 
-//4210191018 - M.Dwi Febrian
-
 public class GameManager : MonoBehaviour
 {
     //Method yang dijalankan sekali di awal scene 
@@ -35,7 +33,7 @@ public class GameManager : MonoBehaviour
         UI.Instance.ShowUIPlayer();
         UI.Instance.ShowGameOver();
         UI.Instance.ShowGameWin();
-        
+
         //Time
         TimeManagement.Instance.SetTimer();
 

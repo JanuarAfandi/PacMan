@@ -1,7 +1,6 @@
 ﻿using Character;
 using UnityEngine;
 
-//4210191018 - M.Dwi Febrian
 namespace Foods
 {
     public class FoodStune : MonoBehaviour, IFactory
@@ -20,7 +19,6 @@ namespace Foods
         //method untuk instantiate object foodStune
         public void Create(GameObject obj)
         {
-            // Instantiate(obj, transform.position + new Vector3(2,2,0), Quaternion.identity);
             obj.SetActive(true);
         }
     }
